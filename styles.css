@@ -18,25 +18,13 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  top: 0;
-  width: 414px;
-  height: 60px;
-
-  /* border: 2px solid rgb(255, 0, 212);
- */
-}
 
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 100%;
+  width: 414px;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.836);
 }
@@ -45,18 +33,22 @@ body {
 }
 
 .app_body {
+ 
+  
+  height: 836px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 60px;
   width: 414px;
-  height: 896px;
-  /*   border: 1px solid rgb(255, 0, 212);*/
+
+    border: 1px solid rgb(255, 0, 212);
 }
 
 .question_card {
+  margin-top: 50px;
   display: flex;
   position: relative;
   justify-content: space-around;
@@ -108,3 +100,23 @@ h2 {
   border-radius: 5px;
   padding: 5px 5px 5px 5px;
 }
+footer {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  bottom: 0;
+  width: 414px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.836);
+  border: 2px solid rgb(47, 255, 5);
+}
+footer a img{
+    height: 60px;
+}
+footer a .book{
+    height: 50px;
+}
+footer a .profile{
+    height: 50px;
+}
+
