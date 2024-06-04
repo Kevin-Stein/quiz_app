@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/profile.css" />
+    <script src="./js/index.js"></script>
     <title>Quiz App</title>
   </head>
   <body>
-   <appbody class="app">
+   <appbody class="app" data-js="appbody">
       <header class="title">
         <h1>Profile</h1>
       </header>
-      <section class="profile_card">
+      <section class="profile_card" data-js="profile_card">
           <section class="pic_name">
             <img class="chicken" src="./img/fashion_chicken.jpg" alt="">
             <h2 class="username">ShinyMcChicken</h2>
@@ -34,7 +35,7 @@
           </section>
           <section class="darkmode">
             <h3>Darkmode</h3>
-            <label class="switch">
+            <label class="switch" data-js="toogle-button">
               <input type="checkbox">
               <span class="slider round"></span>
             </label>
