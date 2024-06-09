@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/index.js"></script>
     <title>Quiz App</title>
   </head>
@@ -19,23 +19,23 @@
           </section>
   
           <section class="about_me">
-            <h3>About me</h3>
+            <h3 class="about_me__text">About me</h3>
            
-              <textarea class="input">....</textarea>
+              <textarea class="about_me__input">....</textarea>
            
           </section>
           <section class="counter">
-            <img class="tasks" aria-label="Icon for the counter" src="https://img.icons8.com/?size=100&id=61852&format=png&color=000000" alt="Tasks done">
-            <h3 class="tasknum">20</h3>
-            <img class="bookm" aria-label="icon bookmarked questions" src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000" alt="bookmarked">
-            <h3 class="booknum">2</h3>
+            <img class="counter__tasks" aria-label="a tasks icon" src="https://img.icons8.com/?size=100&id=61852&format=png&color=000000" alt="Tasks done">
+            <h3 class="tasks__Number" data-js="task-number">20</h3>
+            <img class="counter__bookmarked" aria-label="a bookmark icon" src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000" alt="bookmarked">
+            <h3 class="bookmarked__number" data-js="bookmark-number">2</h3>
           </section>
           <section class="settings">
-            <h3_sett>settings</h3_sett>
+            <h3 class="settings__title">SETTINGS</h3>
           </section>
           <section class="darkmode">
-            <h3>Darkmode</h3>
-            <label class="switch" data-js="toogle-button">
+            <h3 class="darkmode__title">DARKMODE</h3>
+            <label class="switch">
               <input type="checkbox">
               <span class="slider round"></span>
             </label>
@@ -43,12 +43,12 @@
           </section>
       </section>
       <footer>
-          <ul>
-            <a class="home" href="./index.html"><img  aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
-            <a class="book" href="/bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
-            <a class="profile button" style="background-color: rgb(2, 23, 116);"><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
-          </ul>
-      </footer>
-    </appbody>
-  </body>
+        <ul>
+          <a><img aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
+          <a href="./bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
+          <a href="/profile.html"><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
+        </ul>
+       </footer>
+</appbody>
+</body>
 </html>

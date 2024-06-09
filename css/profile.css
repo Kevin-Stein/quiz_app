@@ -1,53 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+@import "./styles.css";
 
-  background: black;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-.app {
-  overflow-y: auto, none;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 414px;
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    0deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  );
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.app.dark{
-  background: rgb(0,3,120);
-  background: linear-gradient(180deg, rgba(0,3,120,1) 0%, rgba(85,0,80,1) 100%);
-  color: white;
-}
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 414px;
-  height: 60px;
-  background-color: rgb(25, 0, 255);
-  z-index: 1;
-  border: 3px solid rgb(255, 255, 255);
-}
-
-.title h1 {
-  color: rgb(255, 255, 255);
-}
 
 .profile_card {
   border-radius: 10px;
@@ -73,11 +25,14 @@ body {
 
 .chicken {
   display: flex;
-
   width: 100px;
   border-radius: 50%;
   top: 50px;
   left: 40px;
+
+}
+.chicken:hover{
+  border: 3px solid blue;
 }
 
 .usernmae {
@@ -90,12 +45,12 @@ body {
   padding-left: 40px;
 }
 
-h3 {
+.about_me__text {
   margin: 0;
   padding-bottom: 10px;
 }
 
-.input {
+.about_me__input {
   font-size: 1rem;
   display: flex;
   width: 300px;
@@ -107,37 +62,52 @@ h3 {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  height: 5%;
+  align-items: center;
+  height: 50px;
+  border: 1px solid blue;
 }
-.tasks {
+.counter__tasks {
   /*   border: 1px solid black;
  */
+  height: 80%;
   padding: 2px 95px 2px 0px;
   background-color: beige;
 }
-.tasknum {
+.tasks__number {
   position: absolute;
   top: 20%;
-  left: 30%;
+  left: 10%;
 }
-.bookm {
+.counter__bookmarked {
   /*   border: 1px solid black;
  */
+  height: 80%;
   padding: 2px 95px 2px 0px;
   background-color: beige;
 }
-.booknum {
+.bookmarked__number {
   position: absolute;
   top: 20%;
   left: 75%;
 }
 .settings {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 75px;
+}
+.settings__title {
+  margin: 0;
+  padding: 0;
 }
 .darkmode {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border: 1px solid red;
+}
+.darkmode__title {
+  margin: 0;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -200,44 +170,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-footer {
-  bottom: 0;
-  width: 414px;
-  height: 60px;
-  display: flex;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(25, 0, 255);
-}
-
-footer ul {
-  width: 414px;
-  height: 60px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-  /* border: 2px solid rgb(47, 255, 5); */
-}
-
-footer ul a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  width: 100%;
-  height: 100%;
-}
-
-footer ul a:hover {
-  background-color: blueviolet;
-}
-
-footer ul a img {
-  height: 50px;
-  filter: brightness(0) saturate(100%) invert(88%) sepia(100%) saturate(1%)
-    hue-rotate(265deg) brightness(108%) contrast(97%);
 }
