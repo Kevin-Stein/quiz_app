@@ -7,11 +7,12 @@
     <script src="./js/index.js"></script>
     <title>Quiz App</title>
   </head>
-  <body>
+  <body class="body" data-js="body">
+    <header class="header">
+      <h1>Profile</h1>
+      <div class="header__background"></div>
+    </header>
    <appbody class="app" data-js="appbody">
-      <header class="title">
-        <h1>Profile</h1>
-      </header>
       <section class="profile_card" data-js="profile_card">
           <section class="pic_name">
             <img class="chicken" src="./img/fashion_chicken.jpg" alt="">
@@ -26,7 +27,7 @@
           </section>
           <section class="counter">
             <img class="counter__tasks" aria-label="a tasks icon" src="https://img.icons8.com/?size=100&id=61852&format=png&color=000000" alt="Tasks done">
-            <h3 class="tasks__Number" data-js="task-number">20</h3>
+            <h3 class="tasks__number" data-js="task-number">20</h3>
             <img class="counter__bookmarked" aria-label="a bookmark icon" src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000" alt="bookmarked">
             <h3 class="bookmarked__number" data-js="bookmark-number">2</h3>
           </section>
@@ -35,20 +36,20 @@
           </section>
           <section class="darkmode">
             <h3 class="darkmode__title">DARKMODE</h3>
-            <label class="switch">
-              <input type="checkbox">
+            <label class="switch" >
+              <input type="checkbox" data-js="darkmodeSwitch">
               <span class="slider round"></span>
             </label>
 
           </section>
       </section>
-      <footer>
-        <ul>
-          <a><img aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
-          <a href="./bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
-          <a href="/profile.html"><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
-        </ul>
-       </footer>
-</appbody>
+      </appbody>
+        <footer>
+          <ul>
+            <a href="./index.html"><img aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
+            <a href="./bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
+            <a><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
+          </ul>
+         </footer>
 </body>
 </html>

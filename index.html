@@ -6,105 +6,42 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Quiz App</title>
   </head>
-  <body data-js="body">
+  <body class="body" data-js="body">
+    <header class="header">
+      <h1>Flashcards</h1>
+      <div class="header__background"></div>
+    </header>
 <appbody class="app">
-      <header class="title">
-        <h1>Quiz App</h1>
-      </header>
   
-    <div class="question_card" data-="question_card">
-            <a class="bookmarkon"
-              ><img aria-label="bookmark" 
-                src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-                alt="bookmark icon"
-            /></a>
+    <article class="question_card" data-="question_card">
+            
+              <a class="bookmark-icon" data-js="bookmark_icon">
+                <img aria-label="bookmark" 
+                  src="./img/icons8-lesezeichen-48.png"
+                  alt="bookmark icon"/>
+              </a>
             <h2>What does “justify-content” do in CSS?</h2>
-            <show class="showbutton"><h3 class="showbutton--textcolor">Show Answer</h3></show>
-            <tags class="tags">
-              <h4>#html</h4>
-              <h4>#flexbox</h4>
-              <h4>#css</h4>
+            <show class="showbutton" data-js="answerButton">
+              <h3 class="showbutton--textcolor">Show Answer</h3>
+            </show>
+            <tags class="tags--position">
+              <ul class="tags">
+                <h4>#html</h4>
+                <h4>#flexbox</h4>
+                <h4>#css</h4>
+              </ul>
             </tags>
-    </div>
-    <div class="question_card">
-      <a class="bookmarkon"
-        ><img aria-label="bookmark" 
-          src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-          alt="bookmark icon"
-      /></a>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-      <show class="show"><h3>Show Answer</h3></show>
-      <tags class="tags">
-        <h4>#html</h4>
-        <h4>#flexbox</h4>
-        <h4>#css</h4>
-      </tags>
-    </div>
-    <div class="question_card">
-      <a class="bookmarkoff"
-        ><img aria-label="bookmark"
-          src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-          alt="bookmark icon"
-      /></a>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-      <show class="show"><h3>Show Answer</h3></show>
-      <tags class="tags">
-        <h4>#html</h4>
-        <h4>#flexbox</h4>
-        <h4>#css</h4>
-      </tags>
-    </div>
-    <div class="question_card">
-      <a class="bookmarkoff"
-        ><img aria-label="bookmark"
-          src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-          alt="bookmark icon"
-      /></a>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-      <show class="show"><h3>Show Answer</h3></show>
-      <tags class="tags">
-        <h4>#html</h4>
-        <h4>#flexbox</h4>
-        <h4>#css</h4>
-      </tags>
-    </div>
-    <div class="question_card">
-      <a class="bookmarkoff"
-        ><img aria-label="bookmark"
-          src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-          alt="bookmark icon"
-      /></a>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-      <show class="show"><h3>Show Answer</h3></show>
-      <tags class="tags">
-        <h4>#html</h4>
-        <h4>#flexbox</h4>
-        <h4>#css</h4>
-      </tags>
-    </div>
-    <div class="question_card">
-      <a class="bookmarkoff"
-        ><img aria-label="bookmark"
-          src="https://img.icons8.com/?size=100&id=26089&format=png&color=000000"
-          alt="bookmark icon"
-      /></a>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-      <show class="show"><h3>Show Answer</h3></show>
-      <tags class="tags">
-        <h4>#html</h4>
-        <h4>#flexbox</h4>
-        <h4>#css</h4>
-      </tags>
-    
-  </div>
-    
+    </article>
+ 
+    </appbody>
       <footer>
-          <ul>
-            <a><img aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
-            <a href="./bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
-            <a href="/profile.html"><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
-          </ul>
-         </footer>
-</appbody>
+            <ul>
+              <a><img aria-label="home button" src="https://img.icons8.com/?size=100&id=BE56i0LQZMIW&format=png&color=000000" alt="home icon"></img></a>
+              <a href="./bookmarks.html" ><img aria-label="bookmarks button"src="https://img.icons8.com/?size=100&id=83135&format=png&color=000000" alt="bookmarks icon"></img></a>
+              <a href="/profile.html"><img aria-label="profile button"src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" alt="profile"></img></a>
+            </ul>
+           </footer>
+           <script src="./js/index.js"></script>
   </body>
+
 </html>

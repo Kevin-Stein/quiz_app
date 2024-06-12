@@ -1,11 +1,14 @@
-/* const appBody = document.querySelector('[data-js="body"]');
-const profileCardElement = document.querySelector('[data-js="profile_card"]');
-const questionCardElement = document.querySelector('[data-="question_card"]');
-const toggleButton = document.querySelector('.switch input[type="checkbo"]');
+const bookmarkToggle = document.querySelector('[data-js="bookmark_icon"]');
+const answerButton = document.querySelector('[data-js="answerButton"]');
+const darkmodeSwitch = document.querySelector('[data-js="darkmodeSwitch"]');
+const darkMode = document.querySelector('[data-js="body"]');
+
+bookmarkToggle.addEventListener("click", () => {
+    bookmarkToggle.classList.toggle("bookmark-on")
+});
+
+darkmodeSwitch.addEventListener("click", () => {
+    darkMode.classList.toggle("dark")
+});
 
 
-
-toggleButton.addEventListener('click', () => {
-
-    appBodyElement.classList.toggle("dark")
-}); */

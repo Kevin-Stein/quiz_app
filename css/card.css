@@ -1,0 +1,85 @@
+.question_card {
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  height: 220px;
+  border: 2px outset #ffffff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.47);
+  backdrop-filter: blur(9.2px);
+  box-shadow: 10px 10px 26px 0px rgba(143, 108, 39, 1);
+}
+
+h2 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.showbutton {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  backdrop-filter: blur(15px);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 2 2 2 black;
+  margin: 0;
+}
+
+
+.showbutton:hover {
+  background-color: #45a7e2;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  transition: background-color 0.2s ease-in-out;
+  .showbutton--textcolor {
+    color: white;
+  }
+}
+
+.showbutton--textcolor {
+  color: black;
+}
+
+.bookmark-icon {
+  max-width: 20px;
+  max-height: 20px;
+  position: absolute;
+  top: -1.1rem;
+  right: 2rem;
+ 
+  filter: brightness(0) saturate(100%) invert(63%) sepia(4%) saturate(14%)
+    hue-rotate(318deg) brightness(100%) contrast(82%);
+}
+.bookmark-on {
+  filter: none;
+}
+
+.tags--position {
+  align-self: flex-start;
+}
+.tags {
+  display: flex;
+  font-weight: 100;
+  margin: 0;
+  color: white;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+
+  h4 {
+    margin: 0;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    background-color: rgb(130, 132, 132);
+  }
+}
