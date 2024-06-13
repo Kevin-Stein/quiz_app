@@ -1,73 +1,97 @@
-.question_card {
-  margin-top: 40px;
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+.card {
+  perspective: 1000px;
+  margin-top: 50px;
   width: 380px;
   height: 220px;
-  border: 2px outset #ffffff;
+  position: relative;
+}
+
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.is-flipped .card__inner {
+  transform: rotateY(180deg);
+}
+
+.card__face--front,
+.card__face--back {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px outset rgb(255, 255, 255, 0.6);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(9.2px);
-  box-shadow: 10px 10px 26px 0px rgba(143, 108, 39, 1);
+  box-shadow: 10px 10px 26px 0px rgb(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s; /* Flip-Animation */
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
 }
 
 h2 {
+  text-align: center;
   font-size: 1.2rem;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-.showbutton {
+
+.showbutton,
+.hidebutton {
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  width: 200px;
+  width: 150px;
   backdrop-filter: blur(15px);
   border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: 2 2 2 black;
-  margin: 0;
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.328);
+  border: 2px outset rgb(255, 255, 255, 0.6);
+}
+.showbutton:active, .hidebutton:active {
+  border: 2px inset rgb(255, 255, 255, 0.6);
 }
 
-
-.showbutton:hover {
-  background-color: #45a7e2;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
-  transition: background-color 0.2s ease-in-out;
-  .showbutton--textcolor {
-    color: white;
-  }
+.showbutton--textcolor,
+.hidebutton--textcolor {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.showbutton--textcolor {
-  color: black;
+.bookmark-icon img {
+  max-width: 30px;
 }
-
-.bookmark-icon {
-  max-width: 20px;
-  max-height: 20px;
+.bookmark-icon{
+  max-width: 30px;
   position: absolute;
-  top: -1.1rem;
-  right: 2rem;
- 
-  filter: brightness(0) saturate(100%) invert(63%) sepia(4%) saturate(14%)
-    hue-rotate(318deg) brightness(100%) contrast(82%);
+  right: 20px;
+  top: -10px;
+  filter: opacity(0.5) brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(0%) 
+  hue-rotate(350deg) brightness(107%) contrast(72%) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3)); 
 }
-.bookmark-on {
-  filter: none;
+.bookmark-on{
+  filter:brightness(0) saturate(100%) invert(47%) sepia(88%) saturate(3829%) 
+  hue-rotate(337deg) brightness(98%) contrast(98%) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
-
 .tags--position {
   align-self: flex-start;
+  padding-bottom: 0.5rem;
 }
+
 .tags {
   display: flex;
   font-weight: 100;
@@ -75,11 +99,16 @@ h2 {
   color: white;
   gap: 0.5rem;
   padding-left: 0.5rem;
-
-  h4 {
-    margin: 0;
-    border-radius: 5px;
-    padding: 5px 5px 5px 5px;
-    background-color: rgb(130, 132, 132);
-  }
+  bottom: 20px;
 }
+
+.tags h4 {
+  margin: 0;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(130, 132, 132,0.5);
+}
+  
+
+  
+

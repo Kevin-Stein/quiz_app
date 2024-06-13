@@ -2,36 +2,35 @@
 
 
 .profile_card {
-  margin-top: 35px;
+  margin-top: 40px;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: space-evenly;
   width: 380px;
   height: 700px;
-  border: 2px outset #ffffff;
+  border: 2px outset rgb(255, 255, 255, 0.6);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.47);
+  background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(9.2px);
-  box-shadow: 10px 10px 26px 0px rgba(143, 108, 39, 1);
+  box-shadow: 10px 10px 26px 0px rgb(0, 0, 0, 0.5);
 }
   
 
-.pic_name {
+.username {
   display: flex;
-  position: relative;
   justify-content: space-evenly;
   align-items: center;
 }
+  
 
-.chicken {
+.pic__img {
   display: flex;
   width: 100px;
   border-radius: 50%;
-  border: 5px inset #A4A4A4;
+  border: 3px groove rgb(255, 255, 255, 0.6);
   top: 50px;
   left: 40px;
-
 }
 
 
@@ -58,6 +57,8 @@
   height: 200px;
   border-radius: 5px;
   resize: none;
+  background: rgba(255, 255, 255, 0);
+  border: 3px groove rgb(255, 255, 255, 0.6);
 }
 .counter {
   
@@ -67,22 +68,18 @@
   height: 50px;
  
 }
-.counter__tasks {
+.counter__tasks, .counter__bookmarked {
 
   height: 80%;
-  padding: 2px 95px 2px 0px;
-  background-color: beige;
+  padding: 5px 95px 5px 5px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
 }
 .tasks__number {
   position: absolute;
   left: 30%;
 }
-.counter__bookmarked {
-  
-  height: 80%;
-  padding: 2px 95px 2px 0px;
-  background-color: beige;
-}
+
 .bookmarked__number {
 position: absolute;
  right: 20%;
@@ -107,7 +104,7 @@ position: absolute;
 .darkmode__title {
   margin: 0;
 }
-/* The switch - the box around the slider */
+/* SLIDER */
 .switch {
   position: relative;
   display: inline-block;
@@ -115,14 +112,13 @@ position: absolute;
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
+ 
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -161,7 +157,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
