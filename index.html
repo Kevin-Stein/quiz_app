@@ -35,11 +35,11 @@
                     </div>
                 </div>
                 <div class="card__face card__face--back">
-                    <a class="bookmark-icon" data-js="bookmark_icon">
+                  <!--   <a class="bookmark-icon" data-js="bookmark_icon">
                         <img aria-label="bookmark" 
                             src="./img/bookmark_checked.svg"
                             alt="bookmark icon"/>
-                    </a>
+                    </a> -->
                     <h2 class="answer_text">how knows</h2>
                     <div class="hidebutton" data-js="answerButton">
                         <h3 class="hidebutton--textcolor">Hide Answer</h3>
@@ -58,11 +58,11 @@
           <fieldset class="newcard__fieldset">
             <legend class="newcard__fieldset__title">Create a new Card</legend>
             <label for="new_question__input">Your Question:</label>
-            <textarea name="new_question__input" id="new_question__input" placeholder="..." maxlength="150" required></textarea>
-            <p><span class="new_question__counter">150</span> characters left</p>
+            <textarea name="new_question__input" id="new_question__input" placeholder="..." maxlength="150" data-js="question_text_input" required></textarea>
+            <p><span class="new_question__counter" data-js="new_question__counter">150</span> characters left</p>
             <label for="new_answer__input">Your Answer:</label>
-            <textarea name="new_answer__input" id="new_answer__input" placeholder="..." maxlength="150" required></textarea>
-            <p><span class="new_answer__counter">150</span> characters left</p>
+            <textarea name="new_answer__input" id="new_answer__input" placeholder="..." maxlength="150" data-js="answer_text_input" required></textarea>
+            <p><span class="new_answer__counter" data-js="new_answer__counter">150</span> characters left</p>
             <label for="new_tag__input">Your Tag:</label>
             <input name="new_tag__input" id="new_answer__input" placeholder="..." required></input>
           </fieldset>

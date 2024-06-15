@@ -1,4 +1,4 @@
-const bookmarkIconToggle = document.querySelector('[data-js="bookmark_icon"]');
+
 const checkbox = document.querySelector("input[name=checkbox]");
 const darkMode = document.querySelector('[data-js="body"]');
 const showButtons = document.querySelectorAll(".showbutton");
@@ -8,17 +8,14 @@ const createButton = document.querySelector('[data-js="create_button"]');
 const cancelButton = document.querySelector('[data-js="cancel_button"]');
 const appBody = document.querySelector('[data-js="appbody"]');
 
-
-
-
-document.addEventListener("touchstart", function() {}, true);
-
-
-
 /* ↓TOGGLE BOOKMARK COLOR↓ */
-bookmarkIconToggle.addEventListener("click", () => {
-  bookmarkIconToggle.classList.toggle("bookmark-on");
+const bookmarkIconToggle = document.querySelectorAll('[data-js="bookmark_icon"]');
+  bookmarkIconToggle.forEach(icon =>{
+  icon.addEventListener("click", () => {
+    icon.classList.toggle("bookmark-on");
+  });
 });
+
 /* ↓SHOW CREATE A CARD FORM↓ */
 
 createButton.addEventListener("click", () => {
@@ -26,12 +23,12 @@ createButton.addEventListener("click", () => {
 });
 cancelButton.addEventListener("click", () => {
   newCardForm.style.display = "none";
+  
 });
 
 /* ↓TOGGLE CARD↓ */
 function flipCard(card) {
   // Prüfen, ob die Karte bereits umgedreht ist oder nicht
-  
 
   // Wenn die Karte bereits umgedreht ist, entferne die Klasse, sonst füge sie hinzu
   if (card.classList.contains("is-flipped")) {
@@ -43,7 +40,6 @@ function flipCard(card) {
 // Click-Event für alle Show-Buttons hinzufügen
 showButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    
     const card = button.closest(".card");
 
     // Flip-Funktion aufrufen
@@ -107,17 +103,36 @@ newCardForm.addEventListener("submit", (event) => {
     </div>
 </div>
 </article>`;
-
+  
   document.body.getElementsByClassName("app__home")[0].append(newCard);
   event.target.reset();
+  question_counter.innerHTML = '150';
+  answer_counter.innerHTML = '150';
   event.target.elements.new_question__input.focus();
 });
 
+const question_counter = document.querySelector('[data-js="new_question__counter"]');
+const answer_counter = document.querySelector('[data-js="new_answer__counter"]');
+const newQuestionInput = document.querySelector('[data-js="question_text_input"]');
+const newAnswerInput = document.querySelector('[data-js="answer_text_input"]');
+
+newQuestionInput.addEventListener("input", () => {
+const textQuestionLength = newQuestionInput.value.length;
+const textQuestionLengthLeft = 150 - textQuestionLength;
+  
+question_counter.innerHTML = textQuestionLengthLeft;
+});
+
+newAnswerInput.addEventListener("input",() => {
+const textAnswerLength = newAnswerInput.value.length;
+const textAnswerLengthLeft = 150 - textAnswerLength;
+    
+answer_counter.innerHTML = textAnswerLengthLeft;
+});
+
 /* ↓DARKMODE↓ */
-/* checkbox.addEventListener("click", () => {
-   
-    document.body.classList.toggle("dark");
-   
-   
-   
-}); */
+const darkModeToggle = document.getElementById('[data-js="darkModeToggle"] input');
+
+darkModeToggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+});
